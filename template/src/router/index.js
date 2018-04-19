@@ -2,12 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Layout = resolve => require.ensure([], () => resolve(require('../views/layout/Layout')), 'Layout')
-const Movies = resolve => require.ensure([], () => resolve(require('../views/movies/index')), 'Movies')
-const Movie = resolve => require.ensure([], () => resolve(require('../views/movie/index')), 'Movie')
-const Share = resolve => require.ensure([], () => resolve(require('../views/share/index')), 'Share')
-const Search = resolve => require.ensure([], () => resolve(require('../views/search/index')), 'Search')
-const Find = resolve => require.ensure([], () => resolve(require('../views/find/index')), 'Find')
-const Callback = resolve => require.ensure([], () => resolve(require('../views/callback/index')), 'Callback')
+const Index = resolve => require.ensure([], () => resolve(require('../views/movies/index')), 'Index')
 
 /* error page */
 const Err404 = resolve => require.ensure([], () => resolve(require('../views/error/404')), 'Err404')
@@ -31,58 +26,11 @@ export const constantRouterMap = [
     path: '/',
     component: Layout,
     hidden: true,
-    redirect: '/timeline',
+    redirect: '/index',
     children: [{
-      path: '/timeline/:typeId',
-      component: Movies,
+      path: '/index',
+      component: Index,
       meta: { title: '午安网 - 过你想过的生活' }
-    }, {
-      path: '/timeline',
-      component: Movies,
-      meta: { title: '午安网 - 过你想过的生活' }
-    }]
-  },
-  {
-    path: '/movie',
-    component: Layout,
-    children: [{
-      path: '',
-      component: Movie
-    }, {
-      path: ':id',
-      component: Movie,
-      meta: { title: '电影详情 - 午安影视' }
-    }]
-  },
-  {
-    path: '/callback',
-    component: Callback
-  },
-  {
-    path: '/share',
-    component: Layout,
-    children: [{
-      path: ':id',
-      component: Share,
-      meta: { title: '分享资源 - 午安影视' }
-    }]
-  },
-  {
-    path: '/',
-    component: Layout,
-    children: [{
-      path: '/search',
-      component: Search,
-      meta: { title: '分享资源 - 午安影视' }
-    }]
-  },
-  {
-    path: '/find',
-    component: Layout,
-    children: [{
-      path: '',
-      component: Find,
-      meta: { title: '发现影视 - 午安影视' }
     }]
   },
   {
