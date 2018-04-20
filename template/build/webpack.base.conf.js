@@ -24,16 +24,16 @@ module.exports = {
             '@': resolve('src'),
             'src': resolve('src'),
             'filters': resolve('src/filters'),
-            'assets': path.join(__dirname, '../src/assets'),
-            'components': path.join(__dirname, '../src/components'),
-            'views': path.join(__dirname, '../src/views'),
-            'styles': path.join(__dirname, '../src/styles'),
-            'api': path.join(__dirname, '../src/api'),
-            'utils': path.join(__dirname, '../src/utils'),
-            'vuex-store': path.join(__dirname, '../src/store'),
-            'router': path.join(__dirname, '../src/router'),
-            'vendor': path.join(__dirname, '../src/vendor'),
-            'static': path.join(__dirname, '../static')
+            'assets': path.resolve(__dirname, '../src/assets'),
+            'components': path.resolve(__dirname, '../src/components'),
+            'views': path.resolve(__dirname, '../src/views'),
+            'styles': path.resolve(__dirname, '../src/styles'),
+            'api': path.resolve(__dirname, '../src/api'),
+            'utils': path.resolve(__dirname, '../src/utils'),
+            'store': path.resolve(__dirname, '../src/store'),
+            'router': path.resolve(__dirname, '../src/router'),
+            'vendor': path.resolve(__dirname, '../src/vendor'),
+            'static': path.resolve(__dirname, '../static')
         }
     },
     externals: {

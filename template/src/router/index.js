@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Layout = resolve => require.ensure([], () => resolve(require('../views/layout/Layout')), 'Layout')
-const Index = resolve => require.ensure([], () => resolve(require('../views/movies/index')), 'Index')
+const Index = resolve => require.ensure([], () => resolve(require('../views/index/index')), 'Index')
 
 /* error page */
 const Err404 = resolve => require.ensure([], () => resolve(require('../views/error/404')), 'Err404')
