@@ -1,5 +1,5 @@
 import fetch from 'utils/fetch'
-import store from 'vuex-store'
+import store from 'store'
 // get user details
 export function getUser () {
   return fetch({
